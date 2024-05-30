@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script type="text/javascript">
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const latitude = urlParams.get('latitude');
+      const longitude = urlParams.get('longitude');
+      const customUrl = `tribe://location?latitude=${latitude}&longitude=${longitude}`;
+      window.location.href = customUrl;
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to the location...</p>
+</body>
+</html>
