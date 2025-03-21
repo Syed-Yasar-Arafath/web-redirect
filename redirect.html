@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,51 +21,6 @@
 <body>
   <div style="text-align: center; margin-top: 50px;">
     <img src="assets/app_icon.png" alt="Tribe Logo" width="150">
-    <h2>Redirecting to Tribe...</h2>
-    <p>If you are not redirected, <a href="#" id="manual-link">click here</a>.</p>
-  </div>
-
-  <script>
-    document.getElementById("manual-link").href = window.location.href;
-  </script>
-</body>
-</html>
- -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Open Graph Meta Tags for better sharing -->
-  <meta property="og:title" content="Tribe - Shared Location">
-  <meta property="og:description" content="Click the link to view the shared location in the Tribe app.">
-  <meta property="og:image" content="assets/app_icon.png"> 
-  <meta property="og:type" content="website">
-  
-  <title>TRIBE</title>
-
-  <script type="text/javascript">
-    window.onload = function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const latitude = urlParams.get('latitude');
-      const longitude = urlParams.get('longitude');
-
-      if (latitude && longitude) {
-        const customUrl = `tribe://location?latitude=${latitude}&longitude=${longitude}`;
-        window.location.href = customUrl;
-      }
-    };
-  </script>
-</head>
-
-<body>
-  <div style="text-align: center; margin-top: 50px;">
-    <!-- Tribe Logo -->
-    <img src="assets/app_icon.png" alt="Tribe Logo" width="150" onerror="this.style.display='none'">
-    
     <h2>Redirecting to Tribe...</h2>
     <p>If you are not redirected, <a href="#" id="manual-link">click here</a>.</p>
   </div>
