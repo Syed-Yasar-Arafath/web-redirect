@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -27,6 +27,53 @@
 
   <script>
     document.getElementById("manual-link").href = window.location.href;
+  </script>
+</body>
+</html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Tribe - Shared Location">
+  <meta property="og:description" content="Click the link to view the shared location in the Tribe app.">
+  <meta property="og:image" content="https://syed-yasar-arafath.github.io/web-redirect/assets/app_icon.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://syed-yasar-arafath.github.io/web-redirect/redirect.html">
+
+  <title>TRIBE</title>
+  
+  <script type="text/javascript">
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const latitude = urlParams.get('latitude');
+      const longitude = urlParams.get('longitude');
+      const customUrl = `tribe://location?latitude=${latitude}&longitude=${longitude}`;
+      window.location.href = customUrl;
+    };
+  </script>
+</head>
+<body>
+  <div style="text-align: center; margin-top: 50px;">
+    <img src="https://syed-yasar-arafath.github.io/web-redirect/assets/app_icon.png" alt="Tribe Logo" width="150">
+    <h2>Redirecting to Tribe...</h2>
+    <p>If you are not redirected, <a href="#" id="manual-link">click here</a>.</p>
+  </div>
+
+  <script>
+    // Set manual redirection link in case automatic redirection fails
+    const urlParams = new URLSearchParams(window.location.search);
+    const latitude = urlParams.get('latitude');
+    const longitude = urlParams.get('longitude');
+    document.getElementById("manual-link").href = `tribe://location?latitude=${latitude}&longitude=${longitude}`;
   </script>
 </body>
 </html>
